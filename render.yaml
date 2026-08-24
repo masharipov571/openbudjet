@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: openbudget-vote-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: INITIATIVE_ID
+        value: 6d1035da-d586-49aa-b344-c80bd5878c0d
+      - key: BOARD_ID
+        value: "55"
